@@ -15,9 +15,7 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            clifford: '#da373d',
-          }
+
         }
       }
     }
@@ -47,7 +45,7 @@
               <li><a>Search</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl">Road Trip</a>
+          <a class="btn btn-ghost text-3xl font-extrabold">Road Trip</a>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
@@ -64,21 +62,131 @@
     </nav>
 
     <!-- Banner Section Start banner section end -->
-    <div id="banner">
+    <div id="banner" class="mt-12 mb-40 relative">
       <div class="hero min-h-screen" style="background-image: url(images/banner.png);">
         <div class="hero-content text-center text-neutral-content">
           <div class="max-w-md">
-            <h1 class="mb-5 text-4xl font-bold">End-to-End Travel with <br><span class="text-green-400">Road Trip</span></h1>
-            <p class="mb-5">Experience seamless travel with our end-t o-end Road Trip. Sit back, relax, and enjoy the journey as we take you there.</p>
-            <button class="btn bg-green-400 border-none">Buy Tickets</button>
+            <h1 class="mb-5 text-4xl font-bold">End-to-End Travel with <br><span class="text-[#1DD100]">Road Trip</span>
+            </h1>
+            <p class="mb-5">Experience seamless travel with our end-t o-end Road Trip. Sit back, relax, and enjoy the
+              journey as we take you there.</p>
+            <button class="btn bg-[#1DD100] border-none">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+      <!-- Banner section ends here -->
+
+
+      <!-- Badge section design star from here -->
+      <div class="flex gap-6 absolute right-60 -bottom-14">
+        <!-- 1st badge -->
+        <div class="flex gap-2 p-6 rounded-2xl  badgeShadow bg-white">
+          <div>
+            <img src="images/people.png" alt="">
+          </div>
+          <div>
+            <p>500K+</p>
+            <p>Registered users</p>
+          </div>
+        </div>
+        <!-- 2nd badge -->
+        <div class="flex gap-2 p-6 rounded-2xl  badgeShadow bg-white">
+          <div>
+            <img src="images/ticket-cupon.png" alt="">
+          </div>
+          <div>
+            <p>500K+</p>
+            <p>Registered users</p>
+          </div>
+        </div>
+        <!-- 3rd badge -->
+        <div class="flex gap-2 p-6 rounded-2xl  badgeShadow bg-white">
+          <div>
+            <img src="images/stoppage.png" alt="">
+          </div>
+          <div>
+            <p>500K+</p>
+            <p>Registered users</p>
           </div>
         </div>
       </div>
     </div>
-
   </header>
-  <main>
 
+
+  <main>
+    <section class="container mx-auto">
+
+      <div class="flex justify-center items-center mb-10">
+        <p class="text-4xl font-bold">Best offers for you</p>
+      </div>
+      <div class="flex gap-12 justify-center items-center">
+        <!-- New 15 coupon -->
+        <div class="bg-[#FFBF0F] flex gap-8 w-1/2 rounded-2xl">
+          <div class="py-8 px-20 border-r-2 border-dashed">
+            <p class="text-4xl font-black">15% OFF</p>
+            <p class="font-semibold text-2xl">on your next purchase</p>
+            <p>use by January 2024</p>
+          </div>
+          <div class="p-8 flex flex-col justify-center items-center">
+            <p class="font-black text-xl"><span class="text-3xl">NEW</span>15</p>
+            <p>Coupon Code</p>
+          </div>
+        </div>
+
+        <!-- Couple 20 coupon -->
+        <div class="bg-[#F78C9C] flex gap-8 rounded-2xl w-1/2">
+          <div class="py-8 px-20 border-r-2 border-dashed">
+            <p class="text-4xl font-black">20% OFF</p>
+            <p class="font-semibold text-2xl">on your next purchase</p>
+            <p>use by January 2024</p>
+          </div>
+          <div class="flex flex-col justify-center items-center w-fit">
+            <p class="font-black text-3xl">Couple 20</p>
+            <p>Coupon Code</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center items-center my-14">
+        <button class="btn btn-outline text-[#1DD100]">See All Offers</button>
+      </div>
+    </section>
+    <!-- Coupon Section End Here -->
+
+    <!-- Ticket Confirming Section Start from Here -->
+    <section>
+      <div class="text-center space-y-4">
+        <h4 class="text-4xl font-bold">P.H Paribahan</h4>
+        <p>P.H Paribahan: Reliable, comfortable bus service connecting destinations with efficiency and convenience for passengers.</p>
+      </div>
+
+      <div>
+        <div>
+          <!-- ph paribohon -->
+          <div>
+            <div>
+              <!-- Greenline Paribahan -->
+              <div>
+                <img src="images/bus-logo.png" alt="">
+              </div>
+              <div>
+                <p>Greenline Paribahan</p>
+                <p>Coach-009-WEB ! AC_Business</p>
+              </div>
+            </div>
+            <div>
+              <!-- 40 Seats left -->
+              <img src="images/seat-green-filled.png" alt="">
+              <p>40 Seats left</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- 500taka -->
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
 
