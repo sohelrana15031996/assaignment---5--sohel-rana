@@ -70,7 +70,7 @@
             </h1>
             <p class="mb-5">Experience seamless travel with our end-t o-end Road Trip. Sit back, relax, and enjoy the
               journey as we take you there.</p>
-            <button class="btn bg-[#1DD100] border-none">Buy Tickets</button>
+            <button id="buyTicket" class="btn bg-[#1DD100] border-none" onclick="buyBtn()">Buy Tickets</button>
           </div>
         </div>
       </div>
@@ -129,7 +129,7 @@
             <p>use by January 2024</p>
           </div>
           <div class="p-8 flex flex-col justify-center items-center">
-            <p class="font-black text-xl"><span class="text-3xl">NEW</span>15</p>
+            <p id="newMemberCoupon" class="font-black text-3xl">NEW15</p>
             <p>Coupon Code</p>
           </div>
         </div>
@@ -142,7 +142,7 @@
             <p>use by January 2024</p>
           </div>
           <div class="flex flex-col justify-center items-center w-fit">
-            <p class="font-black text-3xl">Couple 20</p>
+            <p id="coupleCoupon" class="font-black text-3xl">Couple 20</p>
             <p>Coupon Code</p>
           </div>
         </div>
@@ -158,7 +158,8 @@
     <section class="bg-[#F7F8F8] rounded-t-3xl py-20 ticketSectionShadow">
       <div class="text-center space-y-4">
         <h4 class="text-4xl font-bold">P.H Paribahan</h4>
-        <p>P.H Paribahan is Reliable, comfortable bus service connecting destinations <br>with efficiency and convenience for
+        <p>P.H Paribahan is Reliable, comfortable bus service connecting destinations <br>with efficiency and
+          convenience for
           passengers.</p>
       </div>
       <!-- form section star from here -->
@@ -181,8 +182,9 @@
               <div>
                 <img src="images/seat-green-filled.png" alt="">
               </div>
-              <div>
-                <p>40 Seats left</p>
+              <div class="flex gap-1">
+                <p id="availableSeat">40</p>
+                <p>Seats left</p>
               </div>
             </div>
           </div>
@@ -222,23 +224,212 @@
             <img src="images/fare.png" alt="">
           </div>
           <div>
-            <p class="text-2xl font-bold">550 Taka</p>
+            <p class="text-2xl font-bold space-x-2"><span id="singleFare">550</span> Taka</p>
             <p class="text-[#03071266] te">Per Seat</p>
           </div>
         </div>
       </div>
 
       <!-- Select your seat section start from here -->
-      <div class="my-6">
-        <div>
+      <div id="ticketingSection" class="my-6 container mx-auto bg-white rounded-3xl p-6 flex ">
+        <div class="border-r-2 border-dashed w-3/5 pr-6">
           <h6>Select your seat</h6>
+          <hr class="my-3 border-2 border-dashed">
+          <div class="flex justify-between">
+            <!-- Available Seat -->
+            <div class="flex gap-2 items-center">
+              <img src="images/seat-gray.png" alt="">
+              <p>Available</p>
+            </div>
+            <!-- Selected seat -->
+            <div class="flex gap-2 items-center">
+              <img src="images/seat-green.png" alt="">
+              <p>Selected</p>
+            </div>
+          </div>
+          <hr class="my-3 border-2 border-dashed">
+          <div class="flex gap-14">
+            <!-- Seat number 1-2 -->
+            <div class="grid grid-cols-3 gap-5 justify-between items-center ">
+              <p>A</p>
+              <kbd id="A1" class="kbd w-24">A1</kbd>
+              <kbd id="A2" class="kbd w-24">A2</kbd>
+              <p>B</p>
+              <kbd id="B1" class="kbd w-24 selectSeat">B1</kbd>
+              <kbd id="B2" class="kbd w-24">B2</kbd>
+              <p>C</p>
+              <kbd id="C1" class="kbd w-24">C1</kbd>
+              <kbd id="C2" class="kbd w-24">C2</kbd>
+              <p>D</p>
+              <kbd id="D1" class="kbd w-24">D1</kbd>
+              <kbd id="D2" class="kbd w-24">D2</kbd>
+              <p>E</p>
+              <kbd class="kbd w-24">E1</kbd>
+              <kbd class="kbd w-24">E2</kbd>
+              <p>F</p>
+              <kbd class="kbd w-24">F1</kbd>
+              <kbd class="kbd w-24">F2</kbd>
+              <p>G</p>
+              <kbd class="kbd w-24">G1</kbd>
+              <kbd class="kbd w-24">G2</kbd>
+              <p>H</p>
+              <kbd class="kbd w-24">H1</kbd>
+              <kbd class="kbd w-24">H2</kbd>
+              <p>I</p>
+              <kbd class="kbd w-24">I1</kbd>
+              <kbd class="kbd w-24">I2</kbd>
+              <p>J</p>
+              <kbd class="kbd w-24">J1</kbd>
+              <kbd class="kbd w-24">J2</kbd>
+
+            </div>
+
+
+            <!-- Seat no. 3-4 -->
+            <div class="grid grid-cols-2 gap-4 justify-center items-center">
+              <kbd id="A3" class="kbd w-24">A3</kbd>
+              <kbd id="A4" class="kbd w-24">A4</kbd>
+              <kbd id="B3" class="kbd w-24">B3</kbd>
+              <kbd id="B4" class="kbd w-24">B4</kbd>
+              <kbd id="C3" class="kbd w-24">C3</kbd>
+              <kbd id="C4" class="kbd w-24">C4</kbd>
+              <kbd id="D3" class="kbd w-24">D3</kbd>
+              <kbd id="D4" class="kbd w-24">D4</kbd>
+              <kbd class="kbd w-24">E3</kbd>
+              <kbd class="kbd w-24">E4</kbd>
+              <kbd class="kbd w-24">F3</kbd>
+              <kbd class="kbd w-24">F4</kbd>
+              <kbd class="kbd w-24">G3</kbd>
+              <kbd class="kbd w-24">G4</kbd>
+              <kbd class="kbd w-24">H3</kbd>
+              <kbd class="kbd w-24">H4</kbd>
+              <kbd class="kbd w-24">I3</kbd>
+              <kbd class="kbd w-24">I4</kbd>
+              <kbd class="kbd w-24">J3</kbd>
+              <kbd class="kbd w-24">J4</kbd>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personal Details section -->
+
+        <div class="w-2/5">
+          <h5 class="text-xl font-bold mx-10">Select Your Seat</h5>
+          <hr class="my-3 border-2 border-dashed mx-10">
+          <div class="m-10 p-4 bg-gray-100  rounded-xl">
+            <div class="flex justify-between items-center">
+              <div>
+                <p>Seat</p>
+              </div>
+              <div>
+                <p>Class</p>
+              </div>
+              <div>
+                <p>Price</p>
+              </div>
+            </div>
+            <hr class="my-3 border-2 border-dashed">
+            <!-- Seat Price  -->
+            <div>
+              <div class="flex justify-between items-center">
+                <div>
+                  <p id="seatNumber"></p>
+                </div>
+                <div>
+                  <p id="className"></p>
+                </div>
+                <div>
+                  <p id="Price"></p>
+                </div>
+              </div>
+              <hr class="my-2 border-2  border-solid ">
+              <div class="flex justify-between">
+                <p class="font-medium">Total price</p>
+                <p id="totalAmount" class="font-medium space-x-2 mb-2">BDT</p>
+              </div>
+            </div>
+
+            <!-- Coupon Input -->
+            <div class="relative">
+              <input id="couponCode" type="text" class="rounded-md h-11 w-full p-4" placeholder="Have a Coupon? ">
+              <button class="bg-[#1DD100] border-none absolute right-6 h-7  w-16 rounded-lg top-2">Apply</button>
+
+            </div>
+            <div class="my-4 flex justify-between">
+              <p class="font-semibold">Grand Total</p>
+              <p id="grandTotal">BDT</p>
+            </div>
+          </div>
+
+          <!-- Name Section -->
+          <div class="m-10 space-y-4">
+            <div class="space-y-2">
+              <label for="fname" class="font-semibold">Passenger Name*</label><br>
+              <input type="text" name="" id="fname" placeholder="Enter your name"
+                class="h-12 w-full rounded-lg border-2 ">
+            </div>
+            <div class="space-y-2">
+              <label for="phNumber" class="font-semibold">Phone number*</label><br>
+              <input type="text" name="" id="phNumber" placeholder="Enter your phone number"
+                class="h-12 w-full rounded-lg border-2 ">
+            </div>
+            <div class="space-y-2">
+              <label for="email" class="font-semibold">Email ID</label><br>
+              <input type="text" name="" id="email" placeholder="Enter your email"
+                class="h-12 w-full rounded-lg border-2 ">
+            </div>
+
+            <!-- Button -->   
+            <div>
+              <button onclick="my_modal_1.showModal()" id="cheackoutButton" class="btn w-full bg-[#1DD100] text-white text-xl font-extrabold" >Next</button>
+              <dialog id="my_modal_1" class="modal">
+                <div class="modal-box relative h-72">
+                  <img src="images/success.png" class="absolute left-44 top-4" alt="">
+                  <p class="py-4 mt-20">Thank you for Booking Our Bus Seats. <br>
+
+                    We are working hard to find the best service and deals for you. <br>
+                    
+                    Shortly you will find a confirmation in your email.</p>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="absolute left-44 btn w-1/4 bottom-4 bg-[#1DD100] text-white text-xl font-extrabold">Continue</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+
+            <!-- Open the modal using ID.showModal() method -->
+<button class="btn" >open modal</button>
+
+            <div class="flex justify-evenly">
+              <p class="underline-offset-4 underline">
+                Terms and Conditions
+              </p>
+              <p class="underline-offset-4 underline">Cancellation Policy</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
-  <footer>
+<footer class="footer p-10 bg-neutral text-neutral-content">
+  <aside>
+    <p>ACME Industries Ltd.<br>Providing reliable tech since 1992</p>
+  </aside> 
+  <nav>
+    <h6 class="footer-title">Social</h6> 
+    <div class="grid grid-flow-col gap-4">
+      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+    </div>
+  </nav>
+</footer>
 
-  </footer>
+<script src="ticket-booking.js"></script>
 </body>
 
 </html>
